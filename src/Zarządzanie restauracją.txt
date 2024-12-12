@@ -1,0 +1,29 @@
+1. Logowanie na konto menadżera restauracji(zarządzanie pracownikami, zmiana menu) albo na klienta(login, hasło) lub stworzenie konta dla klienta(imie, nazwisko, login, hasło, email)
+2. Jeżeli jest logowanie na klienta(tu moze byc wyjatek z loadnumber z wyjatkow), klient otrzymuje powiadomienie o wyszukaniu restauracji, w której chce zamówić.
+a) Po wybraniu restauracji, klient może wybrać w case, czy chce zobaczyć opinie restauracji lub czy chce zobaczyć menu restauracji.
+b) Jeżeli klient wybrał opinie restauracji, zostaje mu to wyświetlone
+c) Jeżeli klient wybrał menu, wyświetla mu się menu w case, czyli np ma numer 1 - desery; numer 2 - dania główne; numer 3 - napoje; itd.
+OSTATNIM NUMEREM Z TYCH KATEGORII NP. DESER lub danie glowne - BEDZIE WYSWIETLENIE CZY KLIENT CHCE WYSWIETLIC JE PO KATEGORII(zimne, ciepłe / mięsne lub wegetarianskie) ALBO PO CENIE OD NAJMNIEJSZEJ DO NAJWIEKSZEJ
+d) Klient podczas wybrania jednego z tych rodzaji np. deser, to wtedy moze wrocic do glownego menu i znowu wybrac numery 1,2,3 itd. albo już zamówić.
+e) Po wyswietleniu menu, jest widoczna informacja czy klient już wybrał zamówienie(musi odpowiedziec tak/nie). Jezeli wybrał nie, 
+to pytanie sie powtórzy za 15 sekund. Jezeli klient wybrał tak, wtedy jest widoczna informacja, zeby klient wybrał co chce zamowic po nazwie
+dania. Po kazdym wybraniu jednego dania, jest informacja czy klient chce zamowic jeszcze jedno danie. Jezeli wybral nie, jest informacja
+o zamowionych daniach(nazwa) i kosztem za nie.
+f) Po zamówieniu klient ma do wyboru płatność kartą(podaje numer karty - wyjątek ze musi byc 16 cyfr) lub gotówką(wyjatek zeby nie podal ujemnej wartości lub nie zaplacil 50zl za zamowienie, ktore kosztowalo 100 zloty). Po zaplacie gotowka, klient otrzymuje reszte.
+3. Konto menadzera case:
+1 - zarzadzanie pracownikami
+a) Odczyt wszystkich pracownikow, wraz z ich pozycją(np. szef kuchni)
+b) Zwolnienie pracownika
+c) Dodanie nowego pracownika(imie, nazwisko, email, login i hasło, pozycja)
+2 - zmiana menu
+a) Dodawanie nowego dania
+b) Usuwanie dania
+c) Ustalanie nowej ceny
+3 - statystyki 
+a) Dodawanie zamówionych dań
+b) Dodawanie o ktorej godzinie jest najwiekszy ruch w restauracji. 
+c) Odczyt pliku zamowionych dań(Filtrowanie od najwiekszej ilosci zamowionego dania do najmniej zamowionego dania). 
+d) Odczyt pliku z najwiekszym ruchem w restauracji
+
+Dziedziczenie logowanie jako menadzer lub jako klient.
+Dziedziczenie menadzer : statystyki po menadzerze, menu po menadzerze, zarzadzanie pracownikami po menadzerze
