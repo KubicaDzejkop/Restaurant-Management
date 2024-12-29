@@ -1,4 +1,6 @@
 package pl.gornik.menu;
 
-public class SortingOption {
+public enum SortingOption {
+    BY_SUBCATEGORY,
+    BY_PRICE
 }
