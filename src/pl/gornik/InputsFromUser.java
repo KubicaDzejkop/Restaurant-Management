@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class InputsFromUser {
     private static Scanner scanner = new Scanner(System.in);
 
+    // pobieranie lancucha znakow od uzytkownika
     public static String getStringInput(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine();
     }
 
+    // pobieranie wartości liczbowej od uzytkownika
     public static int getIntInput(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextInt()) {
@@ -21,6 +23,7 @@ public class InputsFromUser {
         return input;
     }
 
+    // pobieranie wartosci zmiennoprzecinkowej od uzytkownika
     public static double getDoubleInput(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextDouble()) {

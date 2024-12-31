@@ -11,10 +11,12 @@ public class Authenticator {
         this.users = new ArrayList<>();
     }
 
+    // rejestrowanie uzytkownika
     public void registerUser(User user) {
         users.add(user);
     }
 
+    // metoda ktora sprawdza czy uzytkownik podal poprawny login i haslo
     public User login(String login, String password) throws LoginException {
         for (User user : users) {
             if (user.getCredentials().getLogin().equals(login) && user.getCredentials().getPassword().equals(password)) {

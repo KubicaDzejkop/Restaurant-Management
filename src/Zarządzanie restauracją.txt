@@ -26,4 +26,3 @@ c) Odczyt pliku zamowionych dań(Filtrowanie od najwiekszej ilosci zamowionego d
 d) Odczyt pliku z najwiekszym ruchem w restauracji
 
 Dziedziczenie logowanie jako menadzer lub jako klient.
-Dziedziczenie menadzer : statystyki po menadzerze, menu po menadzerze, zarzadzanie pracownikami po menadzerze

@@ -17,18 +17,23 @@ public class Employee {
         this.credentials = credentials;
         this.position = position;
     }
-    public String getFirstName(){
+
+    public String getFirstName() {
         return firstName;
     }
+
     public String getLastName() {
         return lastName;
     }
+
     public String getEmail() {
         return email;
     }
-    public Credentials getCredentials(){
+
+    public Credentials getCredentials() {
         return credentials;
     }
+
     public String getPosition() {
         return position;
     }

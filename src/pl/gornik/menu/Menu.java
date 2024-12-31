@@ -12,16 +12,22 @@ public class Menu {
         this.dishes = new ArrayList<>();
     }
 
+    // dodawanie dania
     public void addDish(Dishes dish) {
         dishes.add(dish);
     }
 
+    // usuwanie dania
     public void removeDish(Dishes dish) {
         dishes.remove(dish);
     }
-    public List<Dishes> getDishes(){
+
+    // wszystkie dania
+    public List<Dishes> getDishes() {
         return dishes;
     }
+
+    // metoda do odczytu dan po kategorii
     public List<Dishes> getDishesByCategory(String category) {
         List<Dishes> filteredDishes = new ArrayList<>();
         for (Dishes dish : dishes) {

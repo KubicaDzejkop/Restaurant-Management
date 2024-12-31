@@ -7,13 +7,17 @@ import java.util.List;
 
 public class RestaurantSearcher {
     private List<Restaurant> restaurants;
-    public RestaurantSearcher(){
+
+    public RestaurantSearcher() {
         restaurants = new ArrayList<>();
     }
-    public void addRestaurant(Restaurant restaurant){
+
+    // dodawanie restauracji do wyszukania
+    public void addRestaurant(Restaurant restaurant) {
         restaurants.add(restaurant);
     }
-    public List<Restaurant> getRestaurants(){
+
+    public List<Restaurant> getRestaurants() {
         return restaurants;
     }
 }

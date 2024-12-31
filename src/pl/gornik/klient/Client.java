@@ -12,12 +12,16 @@ public class Client extends User {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
     public String getFirstName() {
         return firstName;
     }
+
     public String getLastName() {
         return lastName;
     }
+
+    // to jest typ uzytkownika, tutaj np jest klient
     @Override
     public String getUserType() {
         return "Client";

@@ -14,15 +14,18 @@ public class Orders {
         this.totalPrice = 0.0;
     }
 
+    // dodawanie zamowionego dania oraz zliczanie ceny za to danie
     public void addOrderItem(OrderItem item) {
         orderItems.add(item);
         totalPrice += item.getDish().getPrice() * item.getQuantity();
     }
 
+    // pobieranie zamowionych dan
     public List<OrderItem> getOrderItems() {
         return orderItems;
     }
 
+    // pobieranie calkowitej ceny za zamowione danie
     public double getTotalPrice() {
         return totalPrice;
     }
