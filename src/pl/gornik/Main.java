@@ -11,11 +11,7 @@ import java.util.Scanner;
 
 public class Main {
     private static final String LOGIN_MESSAGE = "Wybierz opcję: ";
-    private static StaffManager staffManager = new StaffManager();
-    private static MenuEditor menuEditor = new MenuEditor();
-    private static StatisticsManager statisticsManager = new StatisticsManager();
     public static Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
         System.out.println("----------------------------------------------");
         System.out.println("Witamy w systemie zamówień restauracji!");
@@ -26,10 +22,12 @@ public class Main {
         System.out.println("  Login: admin, Hasło: admin123");
         System.out.println("----------------------------------------------");
 
+        // 1. Inicjalizacja serwisów i restauracji
         Authenticator authenticator = new Authenticator();
-        Restaurant restaurant = new Restaurant("Pyszna restauracja");
+        Restaurant restaurant = new Restaurant("Restauracja Allette Coccolini");
         ListOfStaff listOfStaff = new ListOfStaff();
 
+        // 2. Rejestracja przykładowych użytkowników
         Credentials credentialsClient1 = new Credentials("janek", "haslo123");
         Client client1 = new Client("Jan", "Kowalski", credentialsClient1, "jan@gmail.com");
         authenticator.registerUser(client1);
@@ -37,6 +35,7 @@ public class Main {
         Manager manager1 = new Manager(credentialsManager1, "admin@gmail.com");
         authenticator.registerUser(manager1);
 
+        // 3. Dodanie przykładowych dań do menu restauracji
         Dishes dish1 = new Dishes("Kotlet Schabowy", "Dania główne", 20.0);
         Dishes dish2 = new Dishes("Pierogi Ruskie", "Dania główne", 16.50);
         Dishes dish3 = new Dishes("Tiramisu", "Desery", 15.0);
@@ -68,9 +67,11 @@ public class Main {
         restaurant.getMenu().addDish(dish14);
         restaurant.getMenu().addDish(dish15);
 
+        // 4. Dodanie przykładowych opinii
         restaurant.addReview("Bardzo smaczne dania!");
         restaurant.addReview("Obsługa trochę powolna.");
 
+        // 5. Dodanie przykładowego pracownika
         Credentials credentialsEmployee1 = new Credentials("employee1", "haslo123");
         Employee employee1 = new Employee("Adam", "Nowak", "adam23@gmail.com", credentialsEmployee1, "Kucharz");
         Employee employee2 = new Employee("Krystian", "Kownacki", "krystian1@gmail.com", credentialsEmployee1, "Kelner");
@@ -79,6 +80,7 @@ public class Main {
         restaurant.addEmployee(employee1);
         restaurant.addEmployee(employee2);
 
+        // 6. Pętla główna programu
         while (true) {
             String[] options = {"Zaloguj się", "Zarejestruj się", "Wyjdź"};
             displayMenu(LOGIN_MESSAGE, options);
@@ -92,10 +94,10 @@ public class Main {
                     try {
                         User loggedInUser = authenticator.login(login, password);
                         System.out.println("Zalogowano jako: " + loggedInUser.getUserType());
-                        if (loggedInUser instanceof Client client) {
+                        if(loggedInUser instanceof Client client){
                             handleClientActions(client, restaurant);
-                        } // tu bedzie menadzer
-                    } catch (LoginException e) {
+                        }
+                    } catch (LoginException e){
                         System.out.println("Błąd logowania:" + e.getMessage());
                     }
                     break;
@@ -123,7 +125,6 @@ public class Main {
             }
         }
     }
-
     private static void displayMenu(String title, String[] options) {
         System.out.println("\n" + title);
         for (int i = 0; i < options.length; i++) {
@@ -147,6 +148,7 @@ public class Main {
             }
         }
     }
+    // Menu dla klienta
     public static void handleClientMenuNavigation(Client client, Restaurant restaurant, Orders order, Menu menu) {
         while (true) {
             String[] options = {"Zobacz opinie restauracji", "Zobacz menu restauracji", "Wyloguj się"};
@@ -176,9 +178,9 @@ public class Main {
         Orders order = new Orders(client);
         Menu menu = restaurant.getMenu();
         handleClientMenuNavigation(client, restaurant, order, menu);
+
     }
-
-
+    // 8. Metoda obsługi menu klienta
     public static void handleClientMenu(Menu menu, Client client, Orders order) {
         while (true) {
             String[] options = {"Desery", "Dania główne", "Napoje", "Przystawki", "Zupy", "Powrót do poprzedniego menu"};
@@ -207,7 +209,7 @@ public class Main {
             }
         }
     }
-
+    // 9. Metoda obsługi menu kategorii
     public static void handleCategoryMenu(Menu menu, String category, Client client, Orders order) {
         System.out.println("\nWybrana kategoria: " + category);
         List<Dishes> dishes = menu.getDishesByCategory(category);
@@ -226,7 +228,7 @@ public class Main {
             }
         }
     }
-
+    // 11. Metoda obsługi zamówienia
     public static void handleOrder(List<Dishes> dishes, Client client, Menu menu, Orders order) {
         boolean addMoreItems = true;
         while (addMoreItems) {
@@ -267,10 +269,12 @@ public class Main {
         }
         System.out.println("Koszt zamówienia: " + order.getTotalPrice() + "zł");
     }
+
     private static void displayMenuItems(List<Dishes> menuItems) {
         for (int i = 0; i < menuItems.size(); i++) {
             Dishes item = menuItems.get(i);
             System.out.println((i + 1) + ". " + item.getName() + " - " + item.getPrice() + " zł");
         }
     }
+
 }
