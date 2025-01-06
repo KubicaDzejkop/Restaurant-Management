@@ -12,6 +12,6 @@ public class Manager extends User {
     // to jest typ uzytkownika, tutaj np jest menadzer
     @Override
     public String getUserType() {
-        return "Manager";
+        return "Menadżer";
     }
 }

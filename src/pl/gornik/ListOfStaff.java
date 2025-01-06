@@ -20,7 +20,4 @@ public class ListOfStaff {
         staffList.remove(employee);
     }
 
-    public List<Employee> getAllEmployees() {
-        return staffList;
-    }
 }

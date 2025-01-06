@@ -19,9 +19,6 @@ public class Restaurant {
         this.employees = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
-    }
 
     public Menu getMenu() {
         return menu;

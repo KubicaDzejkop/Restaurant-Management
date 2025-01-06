@@ -4,13 +4,10 @@ public class Dishes {
     private String name;
     private String category;
     private double price;
-    private String subCategory;
-
-    public Dishes(String name, String category, double price, String subCategory) {
+    public Dishes(String name, String category, double price) {
         this.name = name;
         this.category = category;
-        this.price = price;
-        this.subCategory = subCategory;
+        this.price = price;;
     }
 
     public String getName() {
@@ -19,10 +16,6 @@ public class Dishes {
 
     public String getCategory() {
         return category;
-    }
-
-    public String getSubCategory() {
-        return subCategory;
     }
 
     public double getPrice() {

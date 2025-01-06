@@ -24,6 +24,6 @@ public class Client extends User {
     // to jest typ uzytkownika, tutaj np jest klient
     @Override
     public String getUserType() {
-        return "Client";
+        return "Klient";
     }
 }
