@@ -1,46 +1,40 @@
+Restaurant Management System
+Project Description
+This project is a console-based restaurant management application written in Java. It allows customers to place orders at the restaurant, while managers can manage the menu, employees, and view statistics.
 
+Features
+Login and Registration
+Register a new customer (first name, last name, username, password, email).
 
-<h1>System zarządzania restauracją</h1>
-    
-<h2>Opis Projektu</h2>
+Log in as a customer or manager.
 
-<p>Ten projekt to zarządzanie restauracją. Ta aplikacja konsolowa napisana w języku Java, która umożliwia klientom składanie zamówień w restauracji, a menadżerom zarządzanie menu, pracownikami i przeglądanie statystyk.</p>
+Customer Functions
+View restaurant reviews.
 
-<h2>Funkcjonalności</h2>
+Browse the restaurant menu (desserts, main courses, drinks, appetizers, soups).
 
-<h3>Logowanie i Rejestracja</h3>
-        <ul>
-            <li>Rejestracja nowego klienta (imię, nazwisko, login, hasło, email).</li>
-            <li>Logowanie jako klient lub menadżer.</li>
-           </ul>
+Place orders.
 
-<h3>Klient</h3>
-        <ul>
-            <li>Przeglądanie opinii restauracji.</li>
-            <li>Przeglądanie menu restauracji (desery, dania główne, napoje, przystawki, zupy).</li>
-            <li>Składanie zamówień</li>
-            <li>Wyświetlanie kosztu zamówienia</li>
-            <li>Obsługa płatności (karta lub gotówka).</li>
-        </ul>
+View order cost.
 
-<h3>Menadzer</h3>
-        <ul>
-            <li>Zarządzanie pracownikami (odczyt, dodawanie, usuwanie).</li>
-            <li>Zmiana menu (dodawanie, usuwanie, zmiana ceny dań).</li>
-            <li>Przeglądanie statystyk (dodawanie godzin największego ruchu, odczyt godziny najwiekszego ruchu).</li>
-        </ul>
+Payment options (card or cash).
 
-        
-<h2>Jak korzystać</h2>
-       <ul>
-        <li><b>Logowanie:</b> Wybierz opcję "Zaloguj się" i podaj login i hasło (przykładowe dane na zalogowanie do klienta: login: <code>janek</code>, hasło: <code>haslo123</code>, na menadżera - login: <code>admin</code>, hasło: <code>admin123</code>).</li>
-            <li><b>Rejestracja:</b> Wybierz opcję "Zarejestruj się" i wypełnij dane.</li>
-        <li><b>Menu:</b> Wybierz opcję(cyfrę) z menu głównego, aby przejść do odpowiedniej sekcji (opinie, menu).</li>
-            <li><b>Zamówienia:</b> Wybierz kategorię, dodaj dania i na końcu wybierz opcje płatności.</li>
-       </ul>
-</code></pre>
+Manager Functions
+Manage employees (view, add, delete).
 
-   
+Edit the menu (add, remove, change dish prices).
 
+View statistics (add peak hours, read peak hours).
 
+How to Use
+Login: Choose the "Log in" option and enter your username and password (sample credentials:
 
+Customer: username: janek, password: haslo123
+
+Manager: username: admin, password: admin123)
+
+Registration: Choose the "Register" option and fill in your information.
+
+Menu Navigation: Select an option (number) from the main menu to access a specific section (reviews, menu, etc.).
+
+Placing Orders: Choose a category, add dishes to your order, and then select a payment method.
